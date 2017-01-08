@@ -5,7 +5,8 @@
 
 var path = require('path'),
     /* Package information */
-    package = require('./package.json');
+    package = require('./package.json'),
+    htmlWebpackPlugin = require('html-webpack-plugin');
 
 var reactEntry = './src/main.js';
 
@@ -39,11 +40,6 @@ module.exports = {
                 loader: "style-loader!css-loader"
             },
             {
-                /* Allows the webpacking of .html files */
-                test: /\.html$/,
-                loader: "file-loader"
-            },
-            {
                 /* Allows the webpacking of .png image files */
                 test: /\.png$/,
                 loader: "url-loader?limit=100000"
@@ -74,5 +70,12 @@ module.exports = {
                 loaders: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
-    }
+    },
+    plugins: [
+        new htmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/template.html',
+            title: package.title,
+        })
+    ]
 };
