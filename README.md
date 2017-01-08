@@ -1,4 +1,4 @@
-React, Webpack and Bulma Template
+Red (React), White (Webpack) and Blue (Bulma) Template :us:
 ========================
 
 - Requires Node v4.2.4
