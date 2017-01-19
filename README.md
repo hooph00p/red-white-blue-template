@@ -67,11 +67,10 @@ SASS Stylesheet enables variables and functional stylesheet development.
 
 **Project-Dependent Field Defaults**:
 
-| Field | Value |
-| -- | -- |
-| name | react-bulma-template |
-| title | Hello World |
-| author | Jared Hooper (@hooph00p) |
+- "name": "react-bulma-template"
+- "title": "Hello World"
+- "author": "Jared Hooper (@hooph00p)"
+
 
 **Repository-Specific Fields**:
 - repository, url
